@@ -1,0 +1,86 @@
+body{
+    /* background-color: #e5e3d9;
+    background-image: url('bgImgFoods.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 1; */
+    margin: 0;
+}
+.background-image{
+    background-image: url('bgImgFoods.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.background-image::before{
+    content: "";
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(255,255,255,0);
+}
+header{
+    display: flex;
+    align-items: center;
+    /* border-bottom: 1px  #1D2432 solid; */
+    /* background-color: #e5e3d9; */
+    background-color: #d9cfab;
+    /* #d9cfabe4 */
+    /* background-color: #DDD4C3; */
+    padding: 0px;
+    overflow: hidden;
+    position: relative;
+    height: 100px;
+}
+.logo{
+    text-decoration: none;
+    padding: 15px;
+    color: #0C3B73;
+    font-family: "Changa One", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    font-style: normal;
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    margin-left: auto;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+.nav-links li{
+    font-family: "Changa One", sans-serif;
+    font-size: 20px;
+    color: #0C3B73;
+}
+.bigText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 250px; */
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+}
+.bigText h1{
+    font-family: "Changa One", sans-serif;
+    font-size: 65px;
+    padding-top: 250px;
+    color: #0C3B73;
+}
+ .bigText p{
+    font-family: "Changa One", sans-serif;
+    font-size: 20px;
+    color: #0C3B73;
+}

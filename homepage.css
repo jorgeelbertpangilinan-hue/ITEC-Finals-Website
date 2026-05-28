@@ -1,0 +1,151 @@
+.hero {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: center;
+    min-height: 808px;
+}
+
+.hero-copy {
+    max-width: 540px;
+}
+
+.eyebrow {
+    margin: 0 0 14px;
+    color: var(--accent);
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.hero-copy h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 76px;
+    line-height: 1;
+}
+
+.hero-text,
+.subject-line,
+.visual-caption span {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.hero-text,
+.subject-line {
+    font-size: 17px;
+    margin: 18px 0 0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.hero-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 620px;
+}
+
+.visual-container {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    padding: 22px;
+    border-radius: 28px;
+    background: #fffdf8;
+    box-shadow: 0 20px 60px rgba(17, 17, 17, 0.08);
+    border: 1px solid rgba(17, 17, 17, 0.05);
+}
+
+.visual-message {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    max-width: 180px;
+    padding: 12px 14px;
+    border-radius: 18px;
+    background: #3f4a56;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.4;
+    box-shadow: 0 14px 28px rgba(17, 17, 17, 0.14);
+}
+
+.visual-frame {
+    position: relative;
+    height: 420px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #f7f0df;
+    margin-top: 96px;
+}
+
+.visual-image {
+    position: absolute;
+    inset: 0;
+    background: url('panget.jpg') center/cover;
+}
+
+.visual-caption {
+    margin-top: 18px;
+}
+
+.visual-caption strong {
+    display: block;
+    font-size: 16px;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        min-height: auto;
+    }
+
+    .hero-copy {
+        max-width: 100%;
+    }
+
+    .hero-visual {
+        min-height: 460px;
+    }
+
+    .visual-container {
+        max-width: 100%;
+    }
+
+    .visual-frame {
+        margin-top: 86px;
+        height: 380px;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-copy h1 {
+        font-size: 58px;
+    }
+
+    .hero-text,
+    .subject-line {
+        font-size: 16px;
+    }
+
+    .visual-frame {
+        height: 320px;
+        margin-top: 78px;
+    }
+
+    .visual-message {
+        top: 18px;
+        right: 18px;
+        max-width: 150px;
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+}

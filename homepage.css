@@ -89,7 +89,7 @@
 .visual-image {
     position: absolute;
     inset: 0;
-    background: url('panget.jpg') center/cover;
+    background: url('assets/images/panget.jpg') center/cover;
 }
 
 .visual-caption {

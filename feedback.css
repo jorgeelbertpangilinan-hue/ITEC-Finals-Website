@@ -21,6 +21,10 @@
     display: flex;
     flex-direction: column;
 }
+.sub-box{
+    flex-direction: row;
+    display: flex;
+}
 .jeboy-contacts{
     padding: 15px;
 }

@@ -1,9 +1,9 @@
 :root {
     --bg: #fffaf0;
     --card: #fff4d6;
-    --accent: #c99200;
+    --accent: #eb812a;
     --text: #111111;
-    --muted: #6f6554;
+    --muted: #8c400d;
 }
 
 * {
@@ -15,25 +15,33 @@ body {
     margin: 0;
     min-height: 100%;
     color: var(--text);
-    font-family: Inter, Arial, sans-serif;
+    font-family: "Folio", Inter, Arial, sans-serif;
 }
 
 body {
+    position: relative;
     overflow-x: hidden;
-    background:
-        radial-gradient(circle at top left, rgba(126, 82, 43, 0.22), transparent 18%),
-        radial-gradient(circle at top right, rgba(96, 60, 29, 0.18), transparent 16%),
-        radial-gradient(circle at bottom left, rgba(111, 72, 38, 0.16), transparent 18%),
-        radial-gradient(circle at bottom right, rgba(82, 51, 24, 0.20), transparent 16%),
-        radial-gradient(circle at center, rgba(255, 248, 231, 0.85), rgba(234, 217, 190, 0.98));
+    background-color: #f4efe6;
+    background-image: url('assets/images/paper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(rgba(255, 250, 242, 0.28), rgba(244, 233, 214, 0.18));
+    pointer-events: none;
+    z-index: 0;
 }
 
 .topbar {
     position: sticky;
     top: 0;
     z-index: 10;
-    background: transparent;
+    padding: 10px 0 8px;
 }
 
 .topbar-inner,
@@ -41,12 +49,23 @@ body {
     max-width: 1180px;
     margin: 0 auto;
     padding: 16px 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .topbar-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: #1f1812;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border: 1px solid rgba(24, 20, 16, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 250, 240, 0.84);
+    box-shadow: 0 12px 34px rgba(17, 17, 17, 0.12);
+    backdrop-filter: blur(14px) saturate(1.1);
+    -webkit-backdrop-filter: blur(14px) saturate(1.1);
 }
 
 .brand {
@@ -56,8 +75,8 @@ body {
 }
 
 .page-name {
-    font-size: 30px;
-    font-weight: 800;
+    font-size: 32px;
+    font-weight: 900;
     display: block;
 }
 
@@ -83,9 +102,11 @@ body {
 
 .nav-link {
     position: relative;
-    color: var(--text);
+    color: #1a1712;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 800;
+    font-size: 17px;
+    letter-spacing: 0.01em;
     padding: 6px 2px;
     transition: color 0.18s ease;
 }
@@ -128,7 +149,8 @@ body {
     padding: 12px 18px;
     border-radius: 12px;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 800;
+    font-size: 16px;
 }
 
 .submit-button,
@@ -151,11 +173,31 @@ body {
     padding: 24px 0;
 }
 
+.results-section h1,
+.submit-section h1,
+.feedback-section h1 {
+    margin: 0;
+    font-family: "Pump", Fredoka, Inter, sans-serif;
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1;
+    color: #111111;
+}
+
+.results-section .hero-text,
+.submit-section .hero-text,
+.feedback-section .hero-text {
+    max-width: 760px;
+}
+
 @media (max-width: 900px) {
     .topbar-inner,
     .page {
         padding-left: 16px;
         padding-right: 16px;
+    }
+
+    .topbar-inner {
+        border-radius: 18px;
     }
 }
 

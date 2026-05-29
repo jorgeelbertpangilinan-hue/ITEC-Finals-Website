@@ -44,6 +44,10 @@
       font-size: 16px;
       cursor: pointer;
       transition: background 0.3s ease;
+      display: flex;
+      gap: 12px;
+      margin-top: 12px;
+      flex-wrap: wrap;
     }
 
     button:hover {

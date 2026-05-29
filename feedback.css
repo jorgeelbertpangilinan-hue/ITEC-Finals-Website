@@ -1,0 +1,164 @@
+
+.feedback-title{
+    text-align: center;
+}
+.mainBox{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mainBox h1{
+    text-align: center;
+}
+.jeboy-contacts img{
+    height: 500px;
+    width: 500px;
+    border-radius: 50px;
+}
+.contacts-box{
+    display: flex;
+    flex-direction: column;
+}
+.jeboy-contacts{
+    padding: 15px;
+}
+.jeboy-contacts a{
+    text-decoration: none;
+    color: black;
+}
+.jeboy-contacts h2{
+    font-size: 30px;
+    text-align: center;
+}
+.jeboy-contacts p{
+    text-align: center;
+    font-size: 20px;
+}
+.jeboy-contacts li{
+    font-size: 18px;
+    list-style: none;
+    padding-left: 60px;
+}
+.jeboy-contacts i{
+    padding-right: 25px;
+    height: 20px;
+    width: 15px;
+}
+.form-box {
+  /* background-color: #f5ede4; */
+  /* border: 2px solid #c84b4b; */
+  padding: 25px;
+  margin : 50px;
+  border-radius: 6px;
+  
+}
+
+/* The title "Send us a Message" */
+.form-box h2 {
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/* All the labels like "Your Name:" */
+.form-box label {
+  display: block;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+  margin-top: 12px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Remove top margin from the very first label */
+.form-box label:first-of-type {
+  margin-top: 0;
+}
+
+/* All the input boxes (text, email, number) */
+.form-box input[type="text"],
+.form-box input[type="email"],
+.form-box input[type="number"] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d4a574;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Make input boxes look better when you click on them */
+.form-box input[type="text"]:focus,
+.form-box input[type="email"]:focus,
+.form-box input[type="number"]:focus {
+  outline: none;
+  border-color: #c84b4b;
+  background-color: #fefbf7;
+}
+
+/* The big message input box */
+.form-box textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d4a574;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  min-height: 100px;
+}
+
+/* Make textarea look better when clicked */
+.form-box textarea:focus {
+  outline: none;
+  border-color: #c84b4b;
+  background-color: #fefbf7;
+}
+
+/* The priority buttons section */
+.prio {
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+/* Style the radio buttons */
+.prio input[type="radio"] {
+  margin-right: 5px;
+  cursor: pointer;
+  accent-color: #c84b4b;
+}
+
+/* Labels for radio buttons (Low, Medium, High) */
+.prio label {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 15px;
+  font-weight: 400;
+  display: inline;
+  cursor: pointer;
+}
+
+/* Placeholder text inside inputs */
+input::placeholder,
+textarea::placeholder {
+  color: #b0b0b0;
+}
+
+.form-box button{
+    height: 30px;
+    width: 100px;
+    
+}
+.form-box button:hover {
+   outline: 2px solid rgba(201, 146, 0, 0.25);
+    outline-offset: 2px;
+}
+
+/* Make button even darker when you click it */
+.form-box button:active {
+  background-color: #933232;
+}

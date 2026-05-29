@@ -154,8 +154,8 @@ textarea::placeholder {
 
 .form-box button{
     display: flex;
-    gap: 12px;
-    margin-top: 12px;
+    gap: 5px;
+    margin-top: 5px;
     flex-wrap: wrap;
 }
 

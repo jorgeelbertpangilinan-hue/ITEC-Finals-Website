@@ -10,10 +10,19 @@
   <title>Freedom Wall</title>
 </head>
 <body>
-  <nav>
-    <a href="message_form.php">Post a Message</a>
-    <a href="view_messages.php">View Messages</a>
-  </nav>
+  <header class="topbar" aria-label="Primary navigation">
+        <div class="topbar-inner">
+            <div class="brand">
+                <a class="brand-link page-name" href="index.html">Freedom Wall</a>
+            </div>
+
+            <nav class="nav-links" role="navigation" aria-label="Main links">
+                <a class="nav-link" href="submit.html">Submit</a>
+                <a class="nav-link" href="results.html">Results</a>
+                <a class="nav-link" href="feedback.html">Feedback</a>
+            </nav>
+        </div>
+    </header>
 
   <div class="form-container">
     <h2>Freedom Wall</h2>

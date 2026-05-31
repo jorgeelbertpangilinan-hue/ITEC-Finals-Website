@@ -54,6 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error submitting feedback: " . $stmt->error;
     }
 
+    header("location: feedback.php");
     $stmt->close();
     $conn->close();
 } else {

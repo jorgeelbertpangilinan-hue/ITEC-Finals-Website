@@ -1,0 +1,37 @@
+<?php
+// Simulan ang session sa pinakataas ng file
+session_start();
+
+// Ikonekta ang iyong connect.php file
+require_once 'connect.php';
+
+if (isset($_POST['signUp'])) {
+    
+    $username = $conn->real_escape_string(trim($_POST['username']));
+    $email    = $conn->real_escape_string(trim($_POST['email']));
+    $passwordInput = trim($_POST['password']);
+    
+
+    $encryptedPassword = md5($passwordInput);
+
+
+    $checkUser = "SELECT * FROM users WHERE username='$username' OR email='$email' LIMIT 1";
+    $result = $conn->query($checkUser);
+
+    if ($result && $result->num_rows > 0) {
+        echo "<script>alert('Username or Email already exists!'); window.location.href='create.php';</script>";
+    } else {
+
+        $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$encryptedPassword')";
+        
+        if ($conn->query($sql) === TRUE) {
+            echo "<script>alert('Account created successfully! Please log in.'); window.location.href='index.php';</script>";
+        } else {
+            echo "Database insertion failed: " . $conn->error;
+        }
+    }
+} else {
+    header("Location: create.php");
+    exit();
+}
+?>
